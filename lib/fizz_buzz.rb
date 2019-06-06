@@ -1,15 +1,18 @@
 def fizz_buzz(number)
-    if number % 15 == 0
+    if has_zero_reminder?(number, 15)
         'fizz buzz'        
-    elsif number % 5 == 0
+    elsif has_zero_reminder?(number, 5)
         'buzz'
-    elsif number % 3 == 0
+    elsif has_zero_reminder?(number, 3)
         'fizz'
     else
         number
     end
 end
 
-
+#refractoring
+def has_zero_reminder?(number, divider)
+    number % divider == 0
+end
 
 
